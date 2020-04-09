@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { initialize } from '../controllers/esriMapController';
 
-export default function MapView({ center, language }) {
+export default function MapView({ center }) {
   const mapRef = useRef();
   const [view, setView] = useState(null);
-  console.log(center, language);
 
   useEffect(() => {
     initialize(mapRef.current);

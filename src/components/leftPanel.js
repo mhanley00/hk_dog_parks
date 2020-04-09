@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './search';
 
-export default function LeftPanel({ onSearch, setLanguage, language }) {
+export default function LeftPanel({ onSearch, setLanguage, language, enableDarkMode, disableDarkMode }) {
   return (
     <div className='left-panel'>
       <div className='title'>{language === 'cn' ? '香港狗公園' : 'HK Dog Parks'}</div>
@@ -10,6 +10,7 @@ export default function LeftPanel({ onSearch, setLanguage, language }) {
           className='btn'
           onClick={(e) => {
             setLanguage('cn');
+            enableDarkMode();
           }}
         >
           中文{' '}
@@ -21,6 +22,7 @@ export default function LeftPanel({ onSearch, setLanguage, language }) {
           className='btn'
           onClick={(e) => {
             setLanguage('en');
+            disableDarkMode();
           }}
         >
           English{' '}

@@ -104,7 +104,6 @@ _handleMapClick = (e) => {
             phone: queryRes.features[0].attributes.Phone,
             remarks: queryRes.features[0].attributes[`Remarks_${language}`]
           };
-          console.log(attributes);
           view.popup.open({
             location: e.mapPoint,
             dockOptions: {

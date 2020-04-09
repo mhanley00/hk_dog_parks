@@ -17,7 +17,6 @@ body,
   height: 100%;
   margin: 0px;
 }
-
 .left-panel {
   font-family: sans-serif;
   position: fixed;
@@ -28,7 +27,6 @@ body,
   padding: 8px;
   box-shadow: 6px 3px 15px -5px grey;
   /* background: #FF0266; */
-  background: #33323c;
   /* light grey #424150 */
   /* light blue #71deff */
   /* pink #c34171 */
@@ -37,13 +35,6 @@ body,
   font-size: 1.2rem;
   padding: 8px;
   margin-bottom: 8px;
-  color: #ffffff;
-  border: 1px solid #38efb9;
-  text-shadow: 1px 1px 2px #71deff;
-}
-.search-widget {
-  border: 1px solid #38efb9;
-  /* box-shadow: 6px 3px 15px -5px #38efb9; */
 }
 .btn-wrap {
   justify-content: space-between;
@@ -52,18 +43,65 @@ body,
   padding-bottom: 8px;
 }
 .btn {
-  background: #38efb9;
-  text-shadow: 1px 1px 2px #71deff;
-  color: #ffffff;
+  // background: #38efb9;
+  // text-shadow: 1px 1px 2px #71deff;
+  // color: #ffffff;
   font-size: 1rem;
   height: 40px;
   width: 116px;
 }
 
-.popup {
-  /* position: fixed; */
-  height: 100px;
-  width: 200px;
-  /* top: 20px;
-  left: 20px; */
+body.dark-mode {
+  .left-panel {
+    background: #33323c;
+  }
+  .title {
+    color: #ffffff;
+    border: 1px solid #38efb9;
+    text-shadow: 1px 1px 2px #71deff;
+  }
+  .btn {
+    background: #38efb9;
+    text-shadow: 1px 1px 2px #71deff;
+    color: #ffffff;
+  }
+  .search-widget {
+    border: 1px solid #38efb9;
+  }
+}
+body.light-mode {
+  .left-panel {
+    background: #FFFFFF;
+  }
+  .title {
+    color: #33323c;
+    border: 1px solid #c34171;
+    text-shadow: 1px 1px 2px #c34171;
+  }
+  .btn {
+    background: #c34171;
+    text-shadow: 1px 1px 2px #c34171;
+    color: #33323c;
+  }
+  .search-widget {
+    border: 1px solid #c34171;
+  }
+  .esri-widget .esri-input {
+    background-color: #FFFFFF;
+    color: #c34171;
+  }
+  .esri-widget--button {
+    background-color: #FFFFFF;
+  }
+  .esri-menu {
+    li, ul {
+      background-color: #FFFFFF;
+      color: #33323c
+    }
+  }
+  .esri-popup__main-container {
+    background-color: #FFFFFF;
+    color: #33323c
+    
+  }
 }
